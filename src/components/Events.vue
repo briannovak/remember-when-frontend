@@ -1,6 +1,11 @@
 <template>
-  <div id="Events">
-		<p>This is the Events Page</p>
+	<div class="container" id="Events">
+		<p></p>
+		<h3>Events</h3>
+		<p>Review all of your events currently in the system. Add or remove events as your popularity change!</p>
+		<router-link class="btn btn-success" to="/add-event">Add Event</router-link>
+		<router-link class="btn btn-danger" to="/remove-event">Remove Event</router-link>
+		<p></p>
 		<EventList :events="events"/>
   </div>
 </template>
@@ -24,12 +29,12 @@ export default {
 	},
 	methods: {
 		loadPeople() {
-			fetch("https://remember-when-backend.herokuapp.com/people")
+			fetch("http://localhost:3000/people")
 				.then(response => response.json())
 				.then(peopleVar => this.people = peopleVar.people);
 		},
 		loadEvents() {
-			fetch("https://remember-when-backend.herokuapp.com/events")
+			fetch("http://localhost:3000/events")
 				.then(response => response.json())
 				.then(eventsVar => this.events = eventsVar.events);
 		}

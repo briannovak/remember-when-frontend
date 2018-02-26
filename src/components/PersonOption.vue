@@ -1,12 +1,12 @@
 <template>
-  <option id="EventOption">
+  <option id="PersonOption">
 		{{data.name}}
   </option>
 </template>
 
 <script>
 export default {
-  name: "EVentOption",
+  name: "PersonOption",
 	props: ["data"]
 }
 </script>

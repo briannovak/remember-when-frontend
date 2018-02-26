@@ -1,14 +1,14 @@
 <template>
 	<transition name="modal-fade">
   <div class="modal-backdrop">
-    <div class="RemoveModal">
+    <div class="RemoveFriendModal">
       <header class="modal-header">
         <slot name="header">
         </slot>
       </header>
        <footer class="modal-footer">
           <slot name="footer">
-            <button type="button" class="btn btn-danger" @click="close">Remove Another Friend! </button>
+            <button type="button" class="btn btn-danger" @click="close">Remove Another Friend</button>
 						<router-link class="btn btn-success" to="/friends">Friend List</router-link>
         </slot>
       </footer>
@@ -20,7 +20,7 @@
 <script>
 
 export default {
-  name: "RemoveModal",
+  name: "RemoveFriendModal",
 	methods: {
 		close() {
         this.$emit('close');
@@ -42,7 +42,7 @@ export default {
 		align-items: center;
 	}
 
-	.RemoveModal {
+	.RemoveFriendModal {
 		background: #FFFFFF;
 		box-shadow: 2px 2px 20px 1px;
 		overflow-x: auto;

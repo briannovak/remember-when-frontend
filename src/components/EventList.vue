@@ -1,11 +1,11 @@
 <template>
   <div id="EventList">
-		<p>this is the events list</p>
 		<table class="table table-hover">
 		  <thead>
 		    <tr>
 		      <th scope="col">Name</th>
-		      <th scope="col">Event Date</th>
+		      <th scope="col">Date</th>
+		      <th scope="col">Type</th>
 		      <th scope="col">Attendees</th>
 		    </tr>
 		  </thead>

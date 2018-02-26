@@ -2,6 +2,7 @@
 	<tr id="Event">
 		<th scope="row">{{data.name}}</th>
 		<td>{{this.convertDate(data.date)}}</td>
+		<td>{{data.type}}</td>
 		<td>{{data.attendees}}</td>
 	</tr>
 </template>

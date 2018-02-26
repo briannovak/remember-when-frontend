@@ -1,25 +1,25 @@
 <template>
 	<transition name="modal-fade">
-  <div class="modal-backdrop">
-    <div class="AddModal">
-      <header class="modal-header">
-        <slot name="header">
-        </slot>
-      </header>
-       <footer class="modal-footer">
-          <slot name="footer">
-            <button type="button" class="btn btn-success" @click="close">Add Another Friend! </button>
-						<router-link class="btn btn-danger" to="/friends">Friend List</router-link>
-        </slot>
-      </footer>
-    </div>
-  </div>
-</transition>
+	  <div class="modal-backdrop">
+	    <div class="AddEventModal">
+	      <header class="modal-header">
+	        <slot name="header">
+	        </slot>
+	      </header>
+	       <footer class="modal-footer">
+	          <slot name="footer">
+	            <button type="button" class="btn btn-success" @click="close">Add Another Event! </button>
+							<router-link class="btn btn-danger" to="/Events">Event List</router-link>
+	        </slot>
+	      </footer>
+	    </div>
+	  </div>
+	</transition>
 </template>
 
 <script>
 export default {
-  name: "AddModal",
+  name: "AddEventModal",
 	methods: {
 		close() {
         this.$emit('close');
@@ -41,7 +41,7 @@ export default {
 		align-items: center;
 	}
 
-	.Modal {
+	.AddEventModal {
 		background: #FFFFFF;
 		box-shadow: 2px 2px 20px 1px;
 		overflow-x: auto;
