@@ -9,6 +9,7 @@ import AddFriend from "@/components/AddFriend"
 import UpdateFriend from "@/components/UpdateFriend"
 import RemoveFriend from "@/components/RemoveFriend"
 import AddEvent from "@/components/AddEvent"
+import UpdateEvent from "@/components/UpdateEvent"
 import RemoveEvent from "@/components/RemoveEvent"
 
 Vue.use(Router)
@@ -59,6 +60,11 @@ export default new Router({
       path: "/add-event",
       name: "AddEvent",
       component: AddEvent
+    },
+    {
+      path: "/update-event",
+      name: "UpdateEvent",
+      component: UpdateEvent
     },
     {
       path: "/remove-event",

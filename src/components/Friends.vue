@@ -38,8 +38,10 @@ export default {
 		loadPeople() {
 			fetch("http://localhost:3000/people/")
 				.then(response => response.json())
-				.then(peopleVar => this.people = peopleVar.people);
-			this.sortPeople();
+				.then(peopleVar => {
+					this.people = peopleVar.people
+					this.sortPeople();
+				});
 		}
 	}
 }

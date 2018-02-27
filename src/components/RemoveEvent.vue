@@ -20,6 +20,7 @@
 <script>
 import RemoveEventModal from "@/components/RemoveEventModal";
 import EventOption from "@/components/EventOption";
+import moment from "moment";
 
 export default {
   name: "RemoveEvent",
@@ -40,10 +41,18 @@ export default {
 		this.loadEvents();
 	},
 	methods: {
+		sortEvents() {
+			this.events.sort((left,right) => {
+				return moment.utc(left.date).diff(moment.utc(right.date));
+			})
+		},
 		loadEvents() {
 			fetch("http://localhost:3000/events")
 				.then(response => response.json())
-				.then(eventVar => this.events = eventVar.events);
+				.then(eventVar => {
+					this.events = eventVar.events;
+					this.sortEvents();
+				});
 		},
 		setEventURL() {
 			for (var i = 0; i < this.events.length; i++) {

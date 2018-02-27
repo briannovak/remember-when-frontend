@@ -1,13 +1,28 @@
 <template>
   <option id="EventOption">
-		{{data.name}}
+		{{data.name}}, {{convertedDate}}
   </option>
 </template>
 
 <script>
+import moment from "moment";
+
 export default {
-  name: "EVentOption",
-	props: ["data"]
+  name: "EventOption",
+	data() {
+		return {
+			convertedDate: ""
+		}
+	},
+	props: ["data"],
+	mounted(){
+		this.convertDate();
+	},
+	methods: {
+		convertDate(){
+			this.convertedDate = moment(this.data.date).format('l')
+		}
+	}
 }
 </script>
 

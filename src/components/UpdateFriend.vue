@@ -47,10 +47,20 @@ export default {
 		this.loadPeople();
 	},
 	methods: {
+		sortPeople(){
+			return this.people.sort((a,b) => {
+				if (a.name > b.name) return 1;
+				if (a.name < b.name) return -1;
+				return 0;
+			})
+		},
 		loadPeople() {
 			fetch("http://localhost:3000/people/")
 				.then(response => response.json())
-				.then(peopleVar => this.people = peopleVar.people);
+				.then(peopleVar => {
+					this.people = peopleVar.people;
+					this.sortPeople();
+				});
 		},
 		updatePlaceholder(){
 			this.updatedInformation = this.personToUpdate;
