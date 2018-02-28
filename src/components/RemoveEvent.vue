@@ -9,7 +9,8 @@
 				</select>
 				<p></p>
 			</div>
-			<button type="submit" class="btn btn-danger">Remove Friend</button>
+			<button type="submit" class="btn btn-danger">Remove Event</button>
+			<router-link class="btn btn-secondary" to="/events">Go Back</router-link>
 			<RemoveEventModal v-if="showModal" @close="showModal = false">
 				<h3 slot="header">{{this.serverResponse}}</h3>
 			</RemoveEventModal>
@@ -55,8 +56,9 @@ export default {
 				});
 		},
 		setEventURL() {
+			var eventToDeleteShort= this.eventToDelete.split(",")[0]
 			for (var i = 0; i < this.events.length; i++) {
-				if (this.eventToDelete === this.events[i].name){
+				if (eventToDeleteShort === this.events[i].name){
 					this.eventURL = "http://localhost:3000/events/" + this.events[i].id
 				}
 			}

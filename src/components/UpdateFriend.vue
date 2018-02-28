@@ -15,6 +15,7 @@
 			</div>
 			<p></p>
 			<button type="submit" class="btn btn-warning">Update Friend</button>
+			<router-link class="btn btn-secondary" to="/friends">Go Back</router-link>
 			<p></p>
 			<UpdateFriendModal v-if="showModal" @close="showModal = false">
 				<h3 slot="header">{{this.serverResponse}}</h3>
@@ -89,9 +90,11 @@ export default {
 				.then(response => response.json())
 				.then(response =>	{
 					if (response) {
-						this.person = "";
+						this.personToUpdate = "";
+						this.updatedInformation = "";
 						this.showModal = true;
 						this.serverResponse = response;
+						this.loadPeople();
 					}
 				})
 			}

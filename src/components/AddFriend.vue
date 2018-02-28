@@ -7,6 +7,7 @@
 				<small id="formHelp" class="form-text text-muted">Please provide your friend's full name. e.g. John Doe</small>
 				<p></p>
 				<button type="submit" class="btn btn-success">Add Friend</button>
+				<router-link class="btn btn-secondary" to="/friends">Go Back</router-link>
 				<AddFriendModal v-if="showModal" @close="showModal = false">
 					<h3 slot="header">{{this.serverResponse}}</h3>
 				</AddFriendModal>

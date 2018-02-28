@@ -13,6 +13,8 @@
     "chart.js": "^2.7.1",
     "moment": "^2.20.1",
     "vue": "^2.5.2",
+    "vue-chart-js": "^1.4.1",
+    "vue-chartjs": "^3.2.1",
     "vue-router": "^3.0.1",
     "vuetify": "^0.17.7"
   },

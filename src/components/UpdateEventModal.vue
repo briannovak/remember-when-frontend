@@ -9,7 +9,7 @@
        <footer class="modal-footer">
           <slot name="footer">
             <button type="button" class="btn btn-success" @click="close">Update Another Event</button>
-						<router-link class="btn btn-danger" to="/friends">Friend List</router-link>
+						<router-link class="btn btn-danger" to="/events">Event List</router-link>
         </slot>
       </footer>
     </div>

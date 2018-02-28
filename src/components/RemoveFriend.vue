@@ -10,6 +10,7 @@
 				<p></p>
 			</div>
 			<button type="submit" class="btn btn-danger">Remove Friend</button>
+			<router-link class="btn btn-secondary" to="/friends">Go Back</router-link>
 			<RemoveFriendModal v-if="showModal" @close="showModal = false">
 				<h3 slot="header">{{this.serverResponse}}</h3>
 			</RemoveFriendModal>

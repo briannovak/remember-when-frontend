@@ -11,7 +11,7 @@
 					<li class="nav-link"><router-link to="/remember">Remember!</router-link></li>
 					<li><router-link class="nav-link" to="/friends">Friends</router-link></li>
 					<li><router-link class="nav-link" to="/events">Events</router-link></li>
-					<li><router-link class="nav-link" to="/remember">About</router-link></li>
+					<!-- <li><router-link class="nav-link" to="/about">About</router-link></li> -->
 		    </ul>
 		  </div>
 		</nav>

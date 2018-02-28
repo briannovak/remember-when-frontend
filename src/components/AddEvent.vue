@@ -28,6 +28,7 @@
 				<small id="formHelp" class="form-text text-muted">CMD + Click to select multiple names.</small>
 	    </div>
 		<button type="submit" class="btn btn-success">Add Event</button>
+		<router-link class="btn btn-secondary" to="/events">Go Back</router-link>
 		<AddEventModal v-if="showModal" @close="showModal = false">
 			<h3 slot="header">{{this.serverResponse}}</h3>
 		</AddEventModal>
