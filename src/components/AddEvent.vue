@@ -67,7 +67,7 @@ export default {
 			if (this.eventName === "" || this.eventDate === "" || this.eventType === "" || this.eventAttendees === []) {
 				alert("Please enter all fields for your event!");
 			} else {
-				fetch("http://localhost:3000/events", {
+				fetch("https://remember-when-backend.herokuapp.com/events", {
 					method: "post",
 					body: JSON.stringify({
 						name: `${this.eventName}`,
@@ -94,7 +94,7 @@ export default {
 			}
 		},
 		loadPeople() {
-			fetch("http://localhost:3000/people")
+			fetch("https://remember-when-backend.herokuapp.com/people")
 				.then(response => response.json())
 				.then(peopleVar => this.people = peopleVar.people)
 		},

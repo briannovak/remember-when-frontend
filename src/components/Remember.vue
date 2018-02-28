@@ -77,7 +77,7 @@ export default {
 	},
 	methods: {
 		loadPeople() {
-			fetch("http://localhost:3000/people")
+			fetch("https://remember-when-backend.herokuapp.com/people")
 				.then(response => response.json())
 				.then(peopleVar => {
 					this.people = peopleVar.people;

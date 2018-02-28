@@ -85,7 +85,7 @@ export default {
 			})
 		},
 		loadPeople() {
-			fetch("http://localhost:3000/people/")
+			fetch("https://remember-when-backend.herokuapp.com/people/")
 				.then(response => response.json())
 				.then(peopleVar => {
 					this.people = peopleVar.people
@@ -98,7 +98,7 @@ export default {
 			})
 		},
 		loadEvents() {
-			fetch("http://localhost:3000/events/")
+			fetch("https://remember-when-backend.herokuapp.com/events/")
 				.then(response => response.json())
 				.then(eventsVar => {
 					this.events = eventsVar.events
@@ -111,7 +111,7 @@ export default {
 		setUpdateURL(){
 			for (var i = 0; i < this.events.length; i++) {
 				if (this.eventToUpdate.split(",")[0] === this.events[i].name){
-					this.updateURL = "http://localhost:3000/events/" + this.events[i].id
+					this.updateURL = "https://remember-when-backend.herokuapp.com/events/" + this.events[i].id
 				}
 			}
 		},

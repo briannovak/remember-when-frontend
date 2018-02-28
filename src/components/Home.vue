@@ -4,7 +4,6 @@
 			<div class="text-center" >
 				<p></p>
 				<img src="../../static/rememberwhenlogo.png">
-			  <!-- <h1 class="display-3">Hello, world!</h1> -->
 				<p></p>
 			  <p class="lead">Track social events with your friends to never forget the last time you met up.</p>
 			  <hr class="my-4">

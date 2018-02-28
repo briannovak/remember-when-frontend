@@ -36,12 +36,12 @@ export default {
 			})
 		},
 		loadPeople() {
-			fetch("http://localhost:3000/people")
+			fetch("https://remember-when-backend.herokuapp.com/people")
 				.then(response => response.json())
 				.then(peopleVar => this.people = peopleVar.people);
 		},
 		loadEvents() {
-			fetch("http://localhost:3000/events")
+			fetch("https://remember-when-backend.herokuapp.com/events")
 				.then(response => response.json())
 				.then(eventsVar => {
 					this.events = eventsVar.events;

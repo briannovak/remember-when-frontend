@@ -48,7 +48,7 @@ export default {
 			})
 		},
 		loadEvents() {
-			fetch("http://localhost:3000/events")
+			fetch("https://remember-when-backend.herokuapp.com/events")
 				.then(response => response.json())
 				.then(eventVar => {
 					this.events = eventVar.events;
@@ -59,7 +59,7 @@ export default {
 			var eventToDeleteShort= this.eventToDelete.split(",")[0]
 			for (var i = 0; i < this.events.length; i++) {
 				if (eventToDeleteShort === this.events[i].name){
-					this.eventURL = "http://localhost:3000/events/" + this.events[i].id
+					this.eventURL = "https://remember-when-backend.herokuapp.com/events/" + this.events[i].id
 				}
 			}
 		},

@@ -37,7 +37,7 @@ export default {
 	},
 	methods: {
 		loadPeople(){
-			fetch("http://localhost:3000/people/")
+			fetch("https://remember-when-backend.herokuapp.com/people/")
 				.then(response => response.json())
 				.then(peopleVar => this.people = peopleVar.people);
 		},
@@ -56,7 +56,7 @@ export default {
 				if (this.person === "") {
 					alert("Please enter a friend's name!");
 				} else {
-					fetch("http://localhost:3000/people/", {
+					fetch("https://remember-when-backend.herokuapp.com/people/", {
 						method: "post",
 						body: JSON.stringify({
 							name: `${this.person}`,

@@ -56,7 +56,7 @@ export default {
 			})
 		},
 		loadPeople() {
-			fetch("http://localhost:3000/people/")
+			fetch("https://remember-when-backend.herokuapp.com/people/")
 				.then(response => response.json())
 				.then(peopleVar => {
 					this.people = peopleVar.people;
@@ -69,7 +69,7 @@ export default {
 		setUpdateURL(){
 			for (var i = 0; i < this.people.length; i++) {
 				if (this.personToUpdate === this.people[i].name){
-					this.updateURL = "http://localhost:3000/people/" + this.people[i].id
+					this.updateURL = "https://remember-when-backend.herokuapp.com/people/" + this.people[i].id
 				}
 			}
 		},
