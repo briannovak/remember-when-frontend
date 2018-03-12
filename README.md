@@ -1,21 +1,29 @@
-# remember-when-frontend
+# Remember When
+Track social events with your friends to never forget the last time you met up.
 
-> galvanize-tower front end site
+[Check it out here!](https://bn-remember-when.firebaseapp.com)
 
-## Build Setup
+# Project Description
 
-``` bash
-# install dependencies
-npm install
+## List Friends
+User can list friends currently stored in database to view last interaction event and total number of events together. User can also add, update, or remove friends in the database.
 
-# serve with hot reload at localhost:8080
-npm run dev
+## List Events
+User can list events currently stored in database to view last event attendees, date, etc. User can also add, update, or remove events in the database.
 
-# build for production with minification
-npm run build
+## Remember!
+User can view bubble chart representing the amount of time since you last saw a friend. The larger the bubble on the chart, the longer it has been since you had an event with the friend.
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+# API Integration
+For information about the Knex.js powered database please see the following links:
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Deployed Database: 
+http://remember-when-backend.herokuapp.com/
+
+Database Github:
+https://github.com/briannovak/remember-when-backend
+
+# Author contact
+|<img src="https://avatars1.githubusercontent.com/u/30843350?s=400&v=4" width="100"> | Brian Novak                    |
+| ------------- | ------------- |
+| LinkIn   | [/in/brian-novak/](https://www.linkedin.com/in/brian-novak/) |
