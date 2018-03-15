@@ -14,6 +14,13 @@ User can list events currently stored in database to view last event attendees, 
 ## Remember!
 User can view bubble chart representing the amount of time since you last saw a friend. The larger the bubble on the chart, the longer it has been since you had an event with the friend.
 
+# Installation
+Fork and clone this repo. Then:
+
+``cd remember-when-frontend``
+
+``npm install ``
+
 # API Integration
 For information about the Knex.js powered database please see the following links:
 
